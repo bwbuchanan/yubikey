@@ -59,5 +59,6 @@ class Yubikey::OTP
   # :stopdoc:
   class InvalidOTPError < StandardError; end
   class InvalidKeyError < StandardError; end
+  class BadSignatureError < StandardError; end
   class BadCRCError < StandardError; end
 end # Yubikey::OTP
