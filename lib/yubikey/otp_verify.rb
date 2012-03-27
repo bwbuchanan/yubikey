@@ -47,7 +47,7 @@ module Yubikey
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
-      http.ca_file = File.expand_path(__FILE__ + "./cacert.pem")
+      http.ca_file = File.expand_path(File.join(File.dirname(__FILE__), "cacert.pem"))
       http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
       req = Net::HTTP::Get.new(uri.request_uri)
